@@ -1,0 +1,9 @@
+/TimeSheet/bin
+/TimeSheet/obj
+*.suo
+*.user
+_ReSharper.*
+/UnitTests/obj
+/UnitTests/bin
+/IntegrationTests/bin
+/IntegrationTests/obj
