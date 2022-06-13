@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<TimeSheetContext>(
-    o => o.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+    o => o.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"))
         .UseLazyLoadingProxies()
 );
 

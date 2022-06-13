@@ -13,10 +13,10 @@ namespace TimeSheet.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    categoryID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    categoryName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    categoryDescription = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    categoryID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    categoryName = table.Column<string>(type: "TEXT", nullable: true),
+                    categoryDescription = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -27,13 +27,13 @@ namespace TimeSheet.Migrations
                 name: "Client",
                 columns: table => new
                 {
-                    clientID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    clientName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    city = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    zip = table.Column<int>(type: "int", nullable: false),
-                    country = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    clientID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    clientName = table.Column<string>(type: "TEXT", nullable: false),
+                    address = table.Column<string>(type: "TEXT", nullable: true),
+                    city = table.Column<string>(type: "TEXT", nullable: true),
+                    zip = table.Column<int>(type: "INTEGER", nullable: false),
+                    country = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,14 +44,14 @@ namespace TimeSheet.Migrations
                 name: "Member",
                 columns: table => new
                 {
-                    memberID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    memberName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    hoursPerWeek = table.Column<float>(type: "real", nullable: false),
-                    username = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    status = table.Column<int>(type: "int", nullable: false),
-                    role = table.Column<int>(type: "int", nullable: false)
+                    memberID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    memberName = table.Column<string>(type: "TEXT", nullable: true),
+                    hoursPerWeek = table.Column<float>(type: "REAL", nullable: false),
+                    username = table.Column<string>(type: "TEXT", nullable: true),
+                    email = table.Column<string>(type: "TEXT", nullable: true),
+                    status = table.Column<int>(type: "INTEGER", nullable: false),
+                    role = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,12 +62,12 @@ namespace TimeSheet.Migrations
                 name: "Project",
                 columns: table => new
                 {
-                    projectID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    projectName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    projectDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    currentclientID = table.Column<int>(type: "int", nullable: true),
-                    memberID = table.Column<int>(type: "int", nullable: true)
+                    projectID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    projectName = table.Column<string>(type: "TEXT", nullable: true),
+                    projectDescription = table.Column<string>(type: "TEXT", nullable: true),
+                    currentclientID = table.Column<int>(type: "INTEGER", nullable: true),
+                    memberID = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -88,16 +88,16 @@ namespace TimeSheet.Migrations
                 name: "TimeSheets",
                 columns: table => new
                 {
-                    sheetID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    time = table.Column<double>(type: "float", nullable: false),
-                    overtime = table.Column<double>(type: "float", nullable: false),
-                    date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    clientID = table.Column<int>(type: "int", nullable: true),
-                    projectID = table.Column<int>(type: "int", nullable: true),
-                    categoryID = table.Column<int>(type: "int", nullable: true),
-                    memberID = table.Column<int>(type: "int", nullable: true)
+                    sheetID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    description = table.Column<string>(type: "TEXT", nullable: true),
+                    time = table.Column<double>(type: "REAL", nullable: false),
+                    overtime = table.Column<double>(type: "REAL", nullable: false),
+                    date = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    clientID = table.Column<int>(type: "INTEGER", nullable: true),
+                    projectID = table.Column<int>(type: "INTEGER", nullable: true),
+                    categoryID = table.Column<int>(type: "INTEGER", nullable: true),
+                    memberID = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
