@@ -12,5 +12,12 @@ namespace TimeSheet.Repository
         {
             dbContext = context;
         }
+
+        public Member findByCredentials(string credential)
+        {
+            Member member = dbContext.Set<Member>().Find(credential);
+
+            return member ?? null;
+        }
     }
 }

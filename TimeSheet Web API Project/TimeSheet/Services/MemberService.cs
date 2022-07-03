@@ -1,4 +1,5 @@
 using TimeSheet.CustomExceptions;
+using TimeSheet.DTO_Models;
 using TimeSheet.Models;
 using TimeSheet.Repository.Interfaces;
 using TimeSheet.Services.Interfaces;
@@ -15,9 +16,9 @@ namespace TimeSheet.Services
             _memberRepository = memberRepository;
         }
 
-        public IEnumerable<Member> GetAll()
+        public IEnumerable<MemberDTO> GetAll()
         {
-            var retVal = _memberRepository.GetAll();
+            var retVal = _memberRepository.GetAll().Select(item => MemberDTO.memberToDTO(item));
 
             if (retVal.Count() == 0)
             {
