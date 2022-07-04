@@ -1,9 +1,5 @@
-# TimeSheet Vega Praksa
+Web API Developed using .Net Core and ASP.NET Core with Unit and Integration Tests written using xUnit and Moq Framework.
 
-Praksa u Vega IT Gamma, TimeSheet .Net App
+Includes CRUD functionalities, exporting report Data into PDF or CSV Format and Global Error Handling using custom middleware
 
-Useful links for later:
-
-https://www.youtube.com/watch?v=f2IdQqpjR0c&ab_channel=CodewithJulian Authentication & CRUD
-
-https://www.youtube.com/watch?v=HU-TZfGO-Do&ab_channel=CodewithJV Basics
+Web API was built following the Onion Architecture Pattern.
