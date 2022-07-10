@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TimeSheet.DTO_models;
 using TimeSheet.Models;
@@ -15,19 +16,22 @@ namespace TimeSheet.Controllers
         {
             _projectService = projectService;
         }
-
+        
+        [Authorize]
         [HttpPost]
         public IActionResult Save(Project obj)
         {
             return Ok(_projectService.Save(obj));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_projectService.GetAll());
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetOne(int id)
         {
@@ -39,6 +43,7 @@ namespace TimeSheet.Controllers
             return Ok(ProjectDTO.ToProjectDTO(project));
         }
 
+        [Authorize]
         [HttpPut]
         public ActionResult<Project> UpdateProject(Project request)
         {
@@ -50,6 +55,7 @@ namespace TimeSheet.Controllers
             return _projectService.UpdateOne(request);
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

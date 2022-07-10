@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TimeSheet.Models;
 using TimeSheet.Services.Interfaces;
@@ -14,31 +15,36 @@ namespace TimeSheet.Controllers
         {
             _categoryService = categoryService;
         }
-
+        
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_categoryService.GetAll());
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Save(Category obj)
         {
             return Ok(obj);
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             return Ok(_categoryService.GetOne(id));
         }
         
+        [Authorize]
         [HttpPut]
         public IActionResult UpdateOne(Category request)
         {
             return Ok(_categoryService.UpdateOne(request));
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

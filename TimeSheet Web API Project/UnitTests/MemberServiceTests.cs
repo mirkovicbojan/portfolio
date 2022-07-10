@@ -3,6 +3,7 @@ using TimeSheet.Models;
 using TimeSheet.Repository.Interfaces;
 using TimeSheet.Services;
 using TimeSheet.CustomExceptions;
+using TimeSheet.DTO_Models;
 
 namespace UnitTests
 {
@@ -41,7 +42,8 @@ namespace UnitTests
             repo.Setup(m => m.GetAll()).Returns(members);
             MemberService memberService = new MemberService(repo.Object);
             //Act
-            IEnumerable<Member> memberList = memberService.GetAll();
+            IEnumerable<MemberDTO> memberList = memberService.GetAll();
+        
             //Assert
             Assert.NotEmpty(memberList);
         }

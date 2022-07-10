@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TimeSheet.DTO_Models;
 using TimeSheet.Models;
@@ -18,6 +19,7 @@ namespace TimeSheet.Controllers
             _timeSheetService = timeSheetService;
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Save(TimeSheetClass obj)
         {
@@ -25,6 +27,7 @@ namespace TimeSheet.Controllers
             return Ok(_timeSheetService.Save(obj));
         }
 
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetOne(int id)
         {
@@ -36,12 +39,14 @@ namespace TimeSheet.Controllers
             return Ok(TimeSheetDTO.ToTimeSheetDTO(sheet));
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_timeSheetService.GetAll());
         }
         
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -54,6 +59,7 @@ namespace TimeSheet.Controllers
             return Ok("TimeSheet deleted.");
         }
 
+        [Authorize]
         [HttpPut]
         public IActionResult UpdateOne(TimeSheetClass request)
         {

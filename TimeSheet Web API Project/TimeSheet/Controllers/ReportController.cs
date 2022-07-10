@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TimeSheet.DTO_Models;
 using TimeSheet.Services.Interfaces;
@@ -17,6 +18,7 @@ namespace TimeSheet.Controllers
             _reportService = reportService;
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Search([FromBody] ReportSearchDTO obj)
         {
@@ -24,6 +26,7 @@ namespace TimeSheet.Controllers
             return Ok(reports);
         }
 
+        [Authorize]
         [HttpPost("generatePDF")]
         public IActionResult generatePDF([FromBody] ReportSearchDTO obj)
         {
@@ -32,6 +35,7 @@ namespace TimeSheet.Controllers
             return File(_reportService.writeToPDF(reports), "application/pdf");
         }
 
+        [Authorize]
         [HttpPost("writeToCSV")]
         public IActionResult writeToCsv([FromBody] ReportSearchDTO obj)
         {

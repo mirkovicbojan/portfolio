@@ -15,6 +15,6 @@ namespace TimeSheet.Services.Interfaces
 
         public Member Save(Member obj);
 
-        
+        public Member CredentialCheck(string email, string? password);
     }
 }

@@ -74,5 +74,14 @@ namespace TimeSheet.Services
 
             return _memberRepository.Save(obj);
         }
+
+        public Member CredentialCheck(string email, string? password)
+        {
+            var memberLogin = _memberRepository.findByCredentials(email);
+            if(memberLogin.password != password || memberLogin == null){
+                throw new UnauthorizedAccessException("The entered password is incorrect.");
+            }
+            return memberLogin;
+        }
     }
 }

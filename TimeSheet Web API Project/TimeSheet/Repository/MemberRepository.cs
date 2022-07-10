@@ -4,19 +4,21 @@ using TimeSheet.Repository.Interfaces;
 
 namespace TimeSheet.Repository
 {
-    public class MemberRepository:Repository<Member>, IMemberRepository
+    public class MemberRepository : Repository<Member>, IMemberRepository
     {
         private TimeSheetContext dbContext;
 
-        public MemberRepository(TimeSheetContext context):base(context)
+        public MemberRepository(TimeSheetContext context) : base(context)
         {
             dbContext = context;
         }
 
         public Member findByCredentials(string credential)
         {
-            Member member = dbContext.Set<Member>().Find(credential);
-
+            var member = dbContext.Set<Member>().Where(m => m.email == credential).FirstOrDefault();
+            if(member == null){
+                throw new KeyNotFoundException("The entered user doesn't exist.");
+            }
             return member ?? null;
         }
     }
