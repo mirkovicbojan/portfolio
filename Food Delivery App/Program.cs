@@ -1,4 +1,8 @@
 using Food_Delivery_App.Contexts;
+using Food_Delivery_App.Repository;
+using Food_Delivery_App.Repository.Interfaces;
+using Food_Delivery_App.Services;
+using Food_Delivery_App.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +17,10 @@ builder.Services.AddDbContext<FoodAppContext>(
     o => o.UseSqlite(builder.Configuration.GetConnectionString("Default Connection"))
         .UseLazyLoadingProxies()
 );
+
+builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 
 var app = builder.Build();
 

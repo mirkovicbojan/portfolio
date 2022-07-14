@@ -16,6 +16,7 @@ namespace Food_Delivery_App.Models
         public string password { get; set; }
 
         public string address { get; set; }
-        
+
+        public double credit { get; set; }
     }
 }
