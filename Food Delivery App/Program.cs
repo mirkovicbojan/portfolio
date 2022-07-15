@@ -17,10 +17,11 @@ builder.Services.AddDbContext<FoodAppContext>(
     o => o.UseSqlite(builder.Configuration.GetConnectionString("Default Connection"))
         .UseLazyLoadingProxies()
 );
-
+builder.Services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 builder.Services.AddScoped<IFoodRepository, FoodRepository>();
 builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+builder.Services.AddScoped<IFoodService, FoodService>();
 
 var app = builder.Build();
 

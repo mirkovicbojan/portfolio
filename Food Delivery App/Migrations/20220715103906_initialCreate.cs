@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Food_Delivery_App.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -31,7 +31,8 @@ namespace Food_Delivery_App.Migrations
                     username = table.Column<string>(type: "TEXT", nullable: false),
                     email = table.Column<string>(type: "TEXT", nullable: false),
                     password = table.Column<string>(type: "TEXT", nullable: false),
-                    address = table.Column<string>(type: "TEXT", nullable: false)
+                    address = table.Column<string>(type: "TEXT", nullable: false),
+                    credit = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,7 +46,7 @@ namespace Food_Delivery_App.Migrations
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     name = table.Column<string>(type: "TEXT", nullable: false),
                     price = table.Column<float>(type: "REAL", nullable: false),
-                    restaurantId = table.Column<Guid>(type: "TEXT", nullable: false)
+                    restaurantId = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -54,8 +55,7 @@ namespace Food_Delivery_App.Migrations
                         name: "FK_foods_restaurants_restaurantId",
                         column: x => x.restaurantId,
                         principalTable: "restaurants",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(

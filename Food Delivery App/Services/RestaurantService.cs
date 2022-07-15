@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Food_Delivery_App.DTOModels;
 using Food_Delivery_App.Models;
 using Food_Delivery_App.Repository.Interfaces;
 using Food_Delivery_App.Services.Interfaces;
@@ -47,5 +48,11 @@ namespace Food_Delivery_App.Services
         {
             return _restaurantRepository.Save(obj);
         }
+
+        public IEnumerable<FoodDTO> showCatalogue(Guid id)
+        {
+            var currentRestaurant = _restaurantRepository.GetById(id);
+            return currentRestaurant.foodCatalogue.Select(item => FoodDTO.toFoodDTO(item));
+        } 
     }
 }

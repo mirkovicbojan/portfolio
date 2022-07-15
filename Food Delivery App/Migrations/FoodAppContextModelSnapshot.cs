@@ -30,7 +30,7 @@ namespace Food_Delivery_App.Migrations
                     b.Property<float>("price")
                         .HasColumnType("REAL");
 
-                    b.Property<Guid>("restaurantId")
+                    b.Property<Guid?>("restaurantId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -95,12 +95,15 @@ namespace Food_Delivery_App.Migrations
             modelBuilder.Entity("Food_Delivery_App.Models.Food", b =>
                 {
                     b.HasOne("Food_Delivery_App.Models.Restaurant", "restaurant")
-                        .WithMany()
-                        .HasForeignKey("restaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("foodCatalogue")
+                        .HasForeignKey("restaurantId");
 
                     b.Navigation("restaurant");
+                });
+
+            modelBuilder.Entity("Food_Delivery_App.Models.Restaurant", b =>
+                {
+                    b.Navigation("foodCatalogue");
                 });
 #pragma warning restore 612, 618
         }

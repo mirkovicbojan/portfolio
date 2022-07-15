@@ -15,6 +15,6 @@ namespace Food_Delivery_App.Models
 
         public bool isDeliveryFree { get; set; }
 
-        //public ICollection food;
+        public virtual ICollection<Food> foodCatalogue{get;set;}
     }
 }

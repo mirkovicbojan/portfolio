@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Food_Delivery_App.DTOModels;
 using Food_Delivery_App.Models;
 
 namespace Food_Delivery_App.Services.Interfaces
@@ -17,5 +14,7 @@ namespace Food_Delivery_App.Services.Interfaces
         public Restaurant UpdateOne(Restaurant obj);
 
         public Restaurant Save(Restaurant obj);
+
+        public IEnumerable<FoodDTO> showCatalogue(Guid id);
     }
 }

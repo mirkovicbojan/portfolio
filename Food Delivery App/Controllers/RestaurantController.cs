@@ -51,5 +51,10 @@ namespace Food_Delivery_App.Controllers
             _restaurantService.DeleteOne(forDeletion);
             return Ok("Restaurant successfully deleted.");
         }
+        [HttpGet("Catalogue")]
+        public IActionResult GetCatalogue([FromHeader]Guid id)
+        {
+            return Ok(_restaurantService.showCatalogue(id));
+        }
     }
 }

@@ -30,5 +30,12 @@ namespace Food_Delivery_App.Contexts
                     .UseSqlite(configuration.GetConnectionString("Default Connection"));
             }
         } 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Food>()
+                .HasOne<Restaurant>(r => r.restaurant)
+                .WithMany(c => c.foodCatalogue)
+                .HasForeignKey(r => r.restaurantId);        
+        }
     }
 }

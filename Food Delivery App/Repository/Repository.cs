@@ -23,7 +23,7 @@ namespace Food_Delivery_App.Repository
 
         public T GetById(Guid? id)
         {
-            _context.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
+            // _context.ChangeTracker.QueryTrackingBehavior = Microsoft.EntityFrameworkCore.QueryTrackingBehavior.NoTracking;
             T item = _context.Set<T>().Find(id)
 
 ;

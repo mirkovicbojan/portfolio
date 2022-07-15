@@ -11,6 +11,8 @@ namespace Food_Delivery_App.Models
 
         public float price { get; set; }
 
-        public virtual Restaurant restaurant { get; set; }
+        public Guid? restaurantId { get; set; }
+        public virtual Restaurant? restaurant{get;set;}
+        
     }
 }
