@@ -16,5 +16,7 @@ namespace Food_Delivery_App.Services.Interfaces
         public Restaurant Save(Restaurant obj);
 
         public IEnumerable<FoodDTO> showCatalogue(Guid id);
+
+        public IEnumerable<Restaurant> filteredSearch(RestaurantSearchDTO obj);//Should return DTO
     }
 }

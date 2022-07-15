@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Food_Delivery_App.DTOModels;
 using Food_Delivery_App.Models;
 using Food_Delivery_App.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -55,6 +56,12 @@ namespace Food_Delivery_App.Controllers
         public IActionResult GetCatalogue([FromHeader]Guid id)
         {
             return Ok(_restaurantService.showCatalogue(id));
+        }
+        [HttpPost("Search")]
+        public IActionResult GetResults([FromBody]RestaurantSearchDTO obj)
+        {
+            var restaurants = _restaurantService.filteredSearch(obj);
+            return Ok(restaurants);
         }
     }
 }

@@ -54,5 +54,23 @@ namespace Food_Delivery_App.Services
             var currentRestaurant = _restaurantRepository.GetById(id);
             return currentRestaurant.foodCatalogue.Select(item => FoodDTO.toFoodDTO(item));
         } 
+        public IEnumerable<Restaurant> filteredSearch(RestaurantSearchDTO obj)
+        {
+            var restaurantList = _restaurantRepository.GetAll();
+            if(!string.IsNullOrEmpty(obj.name))
+            {
+                restaurantList.Where(restaurant => restaurant.name == obj.name);
+            }
+            if(!string.IsNullOrEmpty(obj.foodName))
+            {
+                restaurantList.Where(restaurant => restaurant.foodCatalogue.Where(food => food.name == obj.foodName) != null);
+            }
+            if(obj.isFreeDelivery == true)
+            {
+                restaurantList.Where(restaurant => restaurant.isDeliveryFree == true);
+            }
+
+            return restaurantList;
+        }
     }
 }
