@@ -15,6 +15,8 @@ namespace Food_Delivery_App.Contexts
 
         public DbSet<Food> foods { get; set; }
 
+        public DbSet<Order> orders {get;set;}
+
         public FoodAppContext(DbContextOptions<FoodAppContext> options):base(options){}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -25,9 +27,9 @@ namespace Food_Delivery_App.Contexts
                     .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                     .AddJsonFile("appsettings.json")
                     .Build();
-                optionsBuilder
-                    .UseLazyLoadingProxies()
-                    .UseSqlite(configuration.GetConnectionString("Default Connection"));
+                // optionsBuilder
+                //     .UseLazyLoadingProxies()
+                //     .UseSqlite(configuration.GetConnectionString("Default Connection"));
             }
         } 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

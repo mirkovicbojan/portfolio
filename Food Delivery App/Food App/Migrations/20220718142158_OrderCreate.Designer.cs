@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Food_Delivery_App.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -12,9 +13,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Food_Delivery_App.Migrations
 {
     [DbContext(typeof(FoodAppContext))]
-    partial class FoodAppContextModelSnapshot : ModelSnapshot
+    [Migration("20220718142158_OrderCreate")]
+    partial class OrderCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

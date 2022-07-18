@@ -1,6 +1,6 @@
 version: "3"
 services:
-  cloud-weather-postgres:
+  food-app-postgres:
     image: debezium/postgres:13-alpine
     environment:
       - POSTGRES_DATABASE=food_app_dev

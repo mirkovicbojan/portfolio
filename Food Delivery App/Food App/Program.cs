@@ -18,13 +18,17 @@ builder.Services.AddDbContext<FoodAppContext>(
         opts.EnableSensitiveDataLogging();
         opts.EnableDetailedErrors();
         opts.UseNpgsql(builder.Configuration.GetConnectionString("AppDb"));
+        opts.UseLazyLoadingProxies();
     }, ServiceLifetime.Transient
 );
 builder.Services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+builder.Services.AddHttpClient();
 builder.Services.AddScoped<IFoodRepository, FoodRepository>();
 builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 builder.Services.AddScoped<IFoodService, FoodService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 

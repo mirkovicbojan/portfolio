@@ -63,5 +63,6 @@ namespace Food_Delivery_App.Controllers
             var restaurants = _restaurantService.filteredSearch(obj);
             return Ok(restaurants);
         }
+        
     }
 }
