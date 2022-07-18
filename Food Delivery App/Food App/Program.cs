@@ -14,8 +14,11 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddDbContext<FoodAppContext>(
-    o => o.UseSqlite(builder.Configuration.GetConnectionString("Default Connection"))
-        .UseLazyLoadingProxies()
+    opts => {
+        opts.EnableSensitiveDataLogging();
+        opts.EnableDetailedErrors();
+        opts.UseNpgsql(builder.Configuration.GetConnectionString("AppDb"));
+    }, ServiceLifetime.Transient
 );
 builder.Services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 builder.Services.AddScoped<IFoodRepository, FoodRepository>();
