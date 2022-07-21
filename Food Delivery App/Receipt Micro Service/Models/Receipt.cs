@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Food_Delivery_App.Models
+namespace Receipt_Micro_Service.Models
 {
-    public class Order
+    public class Receipt
     {
         public Guid Id { get; set; }
 

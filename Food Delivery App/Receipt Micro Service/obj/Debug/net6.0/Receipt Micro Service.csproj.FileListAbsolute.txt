@@ -1,0 +1,38 @@
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\appsettings.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Receipt Micro Service.exe
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Receipt Micro Service.deps.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Receipt Micro Service.runtimeconfig.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Receipt Micro Service.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Receipt Micro Service.pdb
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Npgsql.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.csproj.AssemblyReference.cache
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.AssemblyInfoInputs.cache
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.AssemblyInfo.cs
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.csproj.CoreCompileInputs.cache
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\scopedcss\bundle\Receipt Micro Service.styles.css
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.csproj.CopyComplete
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\refint\Receipt Micro Service.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.pdb
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\Receipt Micro Service.genruntimeconfig.cache
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\obj\Debug\net6.0\ref\Receipt Micro Service.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\MailKit.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\MimeKit.dll
+C:\Users\Glupi Zmaj\Desktop\Bojan Portfolio\portfolio\Food Delivery App\Receipt Micro Service\bin\Debug\net6.0\BouncyCastle.Crypto.dll

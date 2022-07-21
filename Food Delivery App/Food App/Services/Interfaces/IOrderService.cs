@@ -5,7 +5,7 @@ namespace Food_Delivery_App.Services.Interfaces
 {
     public interface IOrderService
     {
-        public Task<Order> buildOrder(List<FoodDTO> foodList);
+        public Task<Order> buildOrder(List<FoodDTO> foodList, string recipient);
 
     }
 }

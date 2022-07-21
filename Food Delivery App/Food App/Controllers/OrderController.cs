@@ -17,9 +17,9 @@ namespace Food_Delivery_App.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubmitOrder([FromBody]List<FoodDTO> foodList)
+        public IActionResult SubmitOrder([FromBody]List<FoodDTO> foodList, string userEmail)
         {
-            return Ok(_orderService.buildOrder(foodList));
+            return Ok(_orderService.buildOrder(foodList, userEmail));
         }
     }
 }
