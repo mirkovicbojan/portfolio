@@ -3,7 +3,7 @@
 
 This project is a .Net 6.0 Web API built using the Microservice Architecture and using the repository pattern for all of the services.
 
-This project will be hosted on Amazon ECS with the database being hosted on Amazon RDS somewhere around 24th of July 2022.
+This project will be hosted on Amazon ECS with the database being hosted on Amazon RDS somewhere around 24th of July 2022. Currently runs fine on localhost.
 
 -Features:
 
